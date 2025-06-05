@@ -1,0 +1,33 @@
+.cajaPerfil {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    min-height: 580px;
+    margin: 2rem auto;
+    position: relative;
+    border-radius: 2rem;
+    background: radial-gradient(circle at top center, rgb(118, 15, 128),  pink);
+    border: 1px solid white;
+    display: grid;
+    grid-template-rows: 35% 65%;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.imgPerfil {
+    width: 80%;
+    max-width: 350px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(100% - 175px);
+    border-radius: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    grid-row: 1/2;
+}
+.shinchan{
+    border-radius: 2rem;
+    width: 85%;
+}
