@@ -1,33 +1,202 @@
-.cajaPerfil {
-    width: 90%;
-    max-width: 600px;
-    height: auto;
-    min-height: 580px;
-    margin: 2rem auto;
-    position: relative;
-    border-radius: 2rem;
-    background: radial-gradient(circle at top center, rgb(118, 15, 128),  pink);
-    border: 1px solid white;
-    display: grid;
-    grid-template-rows: 35% 65%;
-    justify-content: center;
-    padding-bottom: 2rem;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
-.imgPerfil {
-    width: 80%;
-    max-width: 350px;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: calc(100% - 175px);
-    border-radius: 2rem;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
-    grid-row: 1/2;
+.main-container {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1a0a3e, #3d1a6b, #5c2a91); /* fondo morado degradado */
+  min-height: 100vh; /* asegura que ocupe toda la pantalla */
+  width: 100%;       /* ocupa todo el ancho */
+  flex-direction: column;
+  gap: 20px;
 }
-.shinchan{
-    border-radius: 2rem;
-    width: 85%;
+
+
+/* TARJETA */
+.card {
+  position: relative;
+  top: 2rem;
+  background: linear-gradient(to bottom, #3d1a6b, #1a0a3e);
+  width: 430px;
+  height: 500px;
+  border-radius: 30px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.6);
+}
+
+/* AVATAR */
+.avatar {
+  width: 170px;
+  height: 170px;
+  background: linear-gradient(135deg, #e58293, #c13a6f);
+  border-radius: 20px;
+  margin: -7rem auto 0 auto; /* centrado */
+  overflow: hidden;
+  border: 4px solid #fff;
+  transition: transform 0.3s ease;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+/* NOMBRE Y HANDLE */
+h1 {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #f0e6ff;
+}
+
+.handle {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* INFO */
+.info {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #e0d4ff;
+}
+
+/* ESTADÍSTICAS */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 15px;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+/* REDES SOCIALES */
+.socials {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.socials a {
+  flex: 1;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #5c2a91;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.socials a:hover {
+  transform: scale(1.1);
+  background-color: #3d1a6b;
+}
+
+/* ICONOS EN EL FOOTER */
+.footer-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-icons img {
+  width: 30px;
+  transition: transform 0.2s ease;
+}
+
+.footer-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px 0;
+  text-align: center;
+  position: relative;
+}
+
+.tab a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+/* ICONOS DE REDES */
+.facebook, .github, .figma, .instagram {
+  cursor: pointer;
+  width: 50px;
+  border-radius: 20px;
+  transition: transform 0.2s ease;
+}
+
+.facebook:hover, .github:hover, .figma:hover, .instagram:hover {
+  transform: scale(1.1);
+}
+
+/* MISC */
+.img1 {
+  border-radius: 20px;
+}
+
+.textox {
+  padding-top: 60px;
 }

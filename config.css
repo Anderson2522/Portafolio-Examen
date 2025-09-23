@@ -1,10 +1,15 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-    background: radial-gradient(circle at top center, rgb(118, 15, 128),  pink);
+  background: linear-gradient(135deg, #1a0a3e, #3d1a6b, #5c2a91); /* degradado morado oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff; /* texto blanco por defecto para buen contraste */
 }
